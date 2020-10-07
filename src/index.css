@@ -209,7 +209,7 @@ body, html, .App, #root, .auth-wrapper {
   text-align: left;
 }
 
-.auth-inner {
+.auth-innerlogin {
   width: 450px;
   margin: auto;
   background: #ffffff;
@@ -265,3 +265,4 @@ body, html, .App, #root, .auth-wrapper {
 img {
   margin-bottom: 2px;
 }
+

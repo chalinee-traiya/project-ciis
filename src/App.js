@@ -11,8 +11,10 @@ import './App.css';
 // import {Sidebar, InputItem, DropdownItem, Icon, Item, Logo, LogoText} from 'react-sidebar-ui'
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
+import Home from "./components/home";
 import Login from "./components/login";
 import SignUp from "./components/signup";
+
 
 const App = () => {
   return (
@@ -85,15 +87,17 @@ const App = () => {
         </div>
       </nav>
 
-      <div className="auth-wrapper">
-        <div className="auth-inner">
+      
           <Switch>
-            <Route exact path='/' component={Login} />
-            <Route path="/sign-in" component={Login} />
+            <Route exact path='/' component={Home} />
+            
+            <div className="auth-wrapper">
+              <div className="auth-innerlogin">
+              <Route path="/sign-in" component={Login} />
+              </div>
+            </div>
             <Route path="/sign-up" component={SignUp} />
           </Switch>
-        </div>
-      </div>
     </div></Router>
   )
 };

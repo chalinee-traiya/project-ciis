@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-// import '.../images/user.png';
 export default class Login extends Component {
     render() {
         return (
