@@ -70,7 +70,7 @@ const App = () => {
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
-        <img src="/images/head.png" width="500px" /> 
+        <a href="/"><img src="/images/head.png" width="500px"/></a>
         {/* <img src="/images/head.png" width="400px" class="d-inline-block align-top" alt="" loading="lazy"></img> */}
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
@@ -90,7 +90,7 @@ const App = () => {
       
           <Switch>
             <Route exact path='/' component={Home} />
-            
+
             <div className="auth-wrapper">
               <div className="auth-innerlogin">
               <Route path="/sign-in" component={Login} />
