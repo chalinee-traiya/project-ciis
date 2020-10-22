@@ -1,82 +1,33 @@
 import React from 'react';
-/*import logo from './logo.svg';*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import ciis from './ciis.jpg';
-// import status from './status.png';
 import './App.css';
-// import List from '@material-ui/core/List'
-// import ListItem from '@material-ui/core/ListItem'
-// import ListItemText from '@material-ui/core/ListItemText'
-// import ImageResize from "image-resize";
-// import {Sidebar, InputItem, DropdownItem, Icon, Item, Logo, LogoText} from 'react-sidebar-ui'
+// import { makeStyles, withStyles } from '@material-ui/core/styles';
+// import Stepper from '@material-ui/core/Stepper';
+// import Step from '@material-ui/core/Step';
+// import StepLabel from '@material-ui/core/StepLabel';
+// import StepConnector from '@material-ui/core/StepConnector';
+// import Button from '@material-ui/core/Button';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Home from "./components/home";
 import Login from "./components/login";
-import SignUp from "./components/signup";
+import Register from "./components/register";
+// import Signup from "./components/signup";
 
 
 const App = () => {
   return (
-    
-    // <div>
-    //   <img src={ciis} />
-    //   <Sidebar bgColor='black' isCollapsed={false}>
-        
-    //     <LogoText>Hi Admin</LogoText>
-        
-    //     <font style= {{color : 'gray'}}>Admin/Finance </font>
-    //     <ListItem >
-    //     <ListItemText>Menu</ListItemText>
-    //     </ListItem>
- 
-    //     <Item bgColor='black'>
-    //       <Icon><i className="status"/></Icon>
-          
-    //       Check Status
-    //     </Item>
-    //     <Item bgColor='black'>
-    //       <Icon><i className="fas fa-info"/></Icon>
-    //       Check Payment
-    //     </Item>
-    //     <Item bgColor='black'>
-    //       <Icon><i className="fas fa-sitemap"/></Icon>
-    //       All research
-    //     </Item>
-        
-    //     <DropdownItem
-    //       values={['Total','Paypal','TMB']}
-    //       bgColor = {'black'}>
-    //         Paid research
-    //       </DropdownItem>
-        
-    //     <ListItem >
-    //     <ListItemText>Setting</ListItemText>
-    //     </ListItem>
-    //     <Item bgColor='black'>
-    //       <Icon><i className="fas fa-home"/></Icon>
-    //       Edit
-    //     </Item>
-    //     <Item bgColor='black'>
-    //       <Icon><i className="fas fa-info"/></Icon>
-    //       Sign out
-    //     </Item>
-        
-        
-    //   </Sidebar>
-    // </div>
 
     <Router>
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-light fixed-top">
         <div className="container">
         <a href="/"><img src="/images/head.png" width="500px"/></a>
-        {/* <img src="/images/head.png" width="400px" class="d-inline-block align-top" alt="" loading="lazy"></img> */}
           <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item">
                 <img src="/images/register.png" width="30px" />
-                <Link className="nav-link" to={"/sign-up"}>REGISTER</Link>
+                <Link className="nav-link" to={"/register"}>REGISTER</Link>
               </li> 
               <li className="nav-item">
                 <img src="/images/login.png" width="30px" />
@@ -90,13 +41,11 @@ const App = () => {
       
           <Switch>
             <Route exact path='/' component={Home} />
+            <Route path="/sign-in" component={Login} />
+            <Route path="/register" component={Register} />
 
-            <div className="auth-wrapper">
-              <div className="auth-innerlogin">
-              <Route path="/sign-in" component={Login} />
-              </div>
-            </div>
-            <Route path="/sign-up" component={SignUp} />
+           
+
           </Switch>
     </div></Router>
   )

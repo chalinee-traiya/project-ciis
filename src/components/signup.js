@@ -1,34 +1,34 @@
 import React, { Component } from "react";
-
-export default class SignUp extends Component {
+export default class Signup extends Component {
     render() {
         return (
             <form>
-                <h3>Sign Up</h3>
+                <div class="text-center">
+                    <img src="/images/user.png" width="70px" /> 
+                </div>
+                
+                
+                <h3>LOGIN</h3>
+                
 
                 <div className="form-group">
-                    <label>First name</label>
-                    <input type="text" className="form-control" placeholder="First name" />
+                    <label>Email *</label>
+                    <input type="email" className="form-control" placeholder="email" />
                 </div>
 
                 <div className="form-group">
-                    <label>Last name</label>
-                    <input type="text" className="form-control" placeholder="Last name" />
+                    <label>Password *</label>
+                    <input type="password" className="form-control" placeholder="password" />
                 </div>
 
-                <div className="form-group">
-                    <label>Email address</label>
-                    <input type="email" className="form-control" placeholder="Enter email" />
-                </div>
-
-                <div className="form-group">
-                    <label>Password</label>
-                    <input type="password" className="form-control" placeholder="Enter password" />
-                </div>
-
-                <button type="submit" className="btn btn-primary btn-block">Sign Up</button>
                 <p className="forgot-password text-right">
-                    Already registered <a href="#">sign in?</a>
+                    Forgot <a href="#">password?</a>
+                </p>
+
+                <button type="submit" className="btn btn-dark rounded-pill btn-block">SIGN IN</button>
+
+                <p className="dont-have-account">
+                    Don't have account? <a href="#">Register</a>
                 </p>
             </form>
         );
